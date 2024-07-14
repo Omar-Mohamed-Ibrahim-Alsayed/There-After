@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/sertitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/sercategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sercategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:text="(Category)"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/sercontent"
+        app:layout_constraintStart_toStartOf="@id/sertitle"
+        app:layout_constraintTop_toBottomOf="@id/sertitle" />
+
+    <TextView
+        android:id="@+id/sercontent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:text="In the heart of the bustling city, a small café nestled between towering skyscrapers offered a tranquil escape for weary urban dwellers. "
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/profilepic"
+        app:layout_constraintStart_toStartOf="@id/sertitle"
+        app:layout_constraintTop_toBottomOf="@id/sercategory" />
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/baseline_photo_size_select_actual_24"
+        app:layout_constraintStart_toStartOf="@+id/sercontent"
+        app:layout_constraintTop_toBottomOf="@+id/sercontent" />
+
+
+    <TextView
+        android:id="@+id/profilename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#00FFFFFF"
+        android:text="Name"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/profilebadge"
+        app:layout_constraintStart_toEndOf="@+id/profilepic"
+        app:layout_constraintTop_toTopOf="@+id/profilepic" />
+
+    <TextView
+        android:id="@+id/profilebadge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="Badge"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/profilename"
+        app:layout_constraintTop_toBottomOf="@+id/profilename"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

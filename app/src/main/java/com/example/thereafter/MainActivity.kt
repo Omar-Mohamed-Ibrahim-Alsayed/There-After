@@ -2,7 +2,7 @@ package com.example.thereafter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.window.SplashScreen
+import com.example.thereafter.fragments.Splash
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.flFragment, SplashScreen())
+            replace(R.id.flFragment, Splash())
             commit()
         }
     }

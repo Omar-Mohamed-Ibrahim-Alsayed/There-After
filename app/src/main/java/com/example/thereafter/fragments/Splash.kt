@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.thereafter.R
 
 
-class splash : Fragment() {
+class Splash : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
