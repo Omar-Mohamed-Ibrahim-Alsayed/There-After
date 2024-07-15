@@ -6,67 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".fragments.Home">
 
-
     <TextView
         android:id="@+id/welcome"
         android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activities"
+        android:text="@string/activitiesTitle"
         android:textColor="@color/black"
         android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/popular"
+        app:layout_constraintBottom_toTopOf="@+id/sermons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <fragment
-        android:id="@+id/nowPlaying"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/activities"
         android:name="com.example.thereafter.fragments.HomeItem"
-        android:layout_width="167dp"
+        android:layout_width="170dp"
         android:layout_height="250dp"
         android:layout_marginBottom="56dp"
         android:background="#FFF"
-        android:src="@drawable/baseline_photo_size_select_actual_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/topRated"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/topusers"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_home_item" />
 
-    <fragment
-        android:id="@+id/topRated"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/topusers"
         android:name="com.example.thereafter.fragments.HomeItem"
-        android:layout_width="167dp"
+        android:layout_width="170dp"
         android:layout_height="250dp"
         android:layout_marginBottom="52dp"
         android:background="#FFF"
-        android:src="@drawable/baseline_photo_size_select_actual_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nowPlaying" />
+        app:layout_constraintStart_toEndOf="@+id/activities"
+        tools:layout="@layout/fragment_home_item" />
 
-    <fragment
-        android:id="@+id/popular"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/sermons"
         android:name="com.example.thereafter.fragments.HomeItem"
-        android:layout_width="167dp"
+        android:layout_width="170dp"
         android:layout_height="250dp"
         android:background="#FFF"
-        android:src="@drawable/baseline_photo_size_select_actual_24"
-        app:layout_constraintBottom_toTopOf="@+id/nowPlaying"
-        app:layout_constraintEnd_toStartOf="@+id/upcoming"
+        app:layout_constraintBottom_toTopOf="@+id/activities"
+        app:layout_constraintEnd_toStartOf="@+id/posts"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        tools:layout="@layout/fragment_home_item" />
 
-    <fragment
-        android:id="@+id/upcoming"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/posts"
         android:name="com.example.thereafter.fragments.HomeItem"
-        android:layout_width="167dp"
+        android:layout_width="170dp"
         android:layout_height="250dp"
         android:background="#FFF"
-        android:src="@drawable/baseline_photo_size_select_actual_24"
-        app:layout_constraintBottom_toTopOf="@+id/topRated"
+        app:layout_constraintBottom_toTopOf="@+id/topusers"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/popular"
-        app:layout_constraintTop_toBottomOf="@+id/welcome" />
-
+        app:layout_constraintStart_toEndOf="@+id/sermons"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        tools:layout="@layout/fragment_home_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

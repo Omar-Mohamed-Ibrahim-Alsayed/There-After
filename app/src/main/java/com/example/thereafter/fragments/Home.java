@@ -54,10 +54,10 @@ import java.util.Random;
 
 public class Home extends Fragment {
 
-    private View popular;
-    private View upcoming;
-    private View toprated;
-    private View nowplaying;
+    private View sermons;
+    private View posts;
+    private View topusers;
+    private View activities;
 
     @Nullable
     @Override
@@ -70,25 +70,25 @@ public class Home extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        nowplaying = view.findViewById(R.id.nowPlaying);
-        toprated = view.findViewById(R.id.topRated);
-        popular = view.findViewById(R.id.popular);
-        upcoming = view.findViewById(R.id.upcoming);
+        activities = view.findViewById(R.id.activities);
+        topusers = view.findViewById(R.id.topusers);
+        sermons = view.findViewById(R.id.sermons);
+        posts = view.findViewById(R.id.posts);
 
 //        getPoster("now_playing", (ImageView) nowplaying.findViewById(R.id.fragImg));
-//        getPoster("top_rated", (ImageView) toprated.findViewById(R.id.fragImg));
-//        getPoster("popular", (ImageView) popular.findViewById(R.id.fragImg));
-//        getPoster("upcoming", (ImageView) upcoming.findViewById(R.id.fragImg));
+//        getPoster("top_rated", (ImageView) topusers.findViewById(R.id.fragImg));
+//        getPoster("sermons", (ImageView) sermons.findViewById(R.id.fragImg));
+//        getPoster("posts", (ImageView) posts.findViewById(R.id.fragImg));
 
-        ((TextView) nowplaying.findViewById(R.id.fragText)).setText("Now Playing");
-        ((TextView) toprated.findViewById(R.id.fragText)).setText("Top Rated");
-        ((TextView) popular.findViewById(R.id.fragText)).setText("Popular");
-        ((TextView) upcoming.findViewById(R.id.fragText)).setText("Upcoming");
+        ((TextView) activities.findViewById(R.id.fragText)).setText("Now Playing");
+        ((TextView) topusers.findViewById(R.id.fragText)).setText("Top Rated");
+        ((TextView) sermons.findViewById(R.id.fragText)).setText("sermons");
+        ((TextView) posts.findViewById(R.id.fragText)).setText("posts");
 
 //        nowplaying.setOnClickListener(v -> trans("now_playing"));
-//        toprated.setOnClickListener(v -> trans("top_rated"));
-//        popular.setOnClickListener(v -> trans("popular"));
-//        upcoming.setOnClickListener(v -> trans("upcoming"));
+//        topusers.setOnClickListener(v -> trans("top_rated"));
+//        sermons.setOnClickListener(v -> trans("sermons"));
+//        posts.setOnClickListener(v -> trans("posts"));
 //
 //        // Profile Button
 //        ImageView profile = requireView().findViewById(R.id.profile);

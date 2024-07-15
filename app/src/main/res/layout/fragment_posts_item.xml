@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="@color/black"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/profilePicDescription"
+        android:src="@drawable/baseline_photo_size_select_actual_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+
+    <TextView
+        android:id="@+id/profilename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="@string/sermonItemName"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="9dp"
+        app:layout_constraintStart_toEndOf="@+id/profilepic"
+        app:layout_constraintTop_toTopOf="@+id/profilepic" />
+
+    <TextView
+        android:id="@+id/profilebadge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:text="@string/sermonItemBadge"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/profilename"
+        app:layout_constraintTop_toBottomOf="@+id/profilename" />
+
+    <TextView
+        android:id="@+id/sercontent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxWidth="500dp"
+        android:background="#00FFFFFF"
+        android:text="@string/sermonItemContent"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
+
+
+    <LinearLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/sercontent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="18dp">
+
+        <ImageView
+            android:id="@+id/reaction_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_thumb_up_off_alt_24"
+            android:contentDescription="@string/likeIcon"
+            android:layout_marginEnd="6dp"
+            android:layout_marginStart="6dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/reaction_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/likeText"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/comment_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_comment_24"
+            android:contentDescription="@string/commentIcon"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="6dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/comment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/commentText"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/share_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_ios_share_24"
+            android:contentDescription="@string/shareIcon"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="6dp"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/share_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="@string/shareText"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

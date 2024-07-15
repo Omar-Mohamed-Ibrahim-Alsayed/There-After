@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.splash"
+    tools:context=".fragments.Splash"
     android:background="@drawable/gd_splash"
     >
 
@@ -13,6 +13,7 @@
         android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="90dp"
+        android:contentDescription="@string/icon"
         android:src="@drawable/baseline_mosque_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
