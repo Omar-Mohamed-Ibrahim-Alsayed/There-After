@@ -1,4 +1,4 @@
-package com.example.thereafter;
+package com.example.thereafter.viewModels;
 
 import androidx.lifecycle.ViewModel;
 

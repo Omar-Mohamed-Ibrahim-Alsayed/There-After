@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/baseline_photo_size_select_actual_24"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImage"
+        android:hint="Name"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/editNameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit_pen"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Edit Name"
+        android:layout_below="@id/editName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"/>
+
+    <EditText
+        android:id="@+id/editBadges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editNameBtn"
+        android:hint="Badges"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/editBadgesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit_pen"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Edit Badges"
+        android:layout_below="@id/editBadges"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"/>
+
+    <EditText
+        android:id="@+id/editDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBadgesBtn"
+        android:gravity="center"
+        android:hint="Description"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/editDescriptionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit_pen"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Edit Description"
+        android:layout_below="@id/editDescription"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"/>
+
+</RelativeLayout>

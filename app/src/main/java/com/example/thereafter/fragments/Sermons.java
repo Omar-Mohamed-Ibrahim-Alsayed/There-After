@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.thereafter.R;
-import com.example.thereafter.SermonsViewModel;
+import com.example.thereafter.viewModels.SermonsViewModel;
 
 public class Sermons extends Fragment {
 

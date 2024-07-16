@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/activitiesTitle"
         android:textColor="@color/black"
-        android:textSize="60sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/sermons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,10 +21,10 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/activities"
-        android:name="com.example.thereafter.fragments.HomeItem"
+        android:name="com.example.thereafter.items.HomeItem"
         android:layout_width="170dp"
         android:layout_height="250dp"
-        android:layout_marginBottom="56dp"
+        android:layout_margin="10dp"
         android:background="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/topusers"
@@ -33,10 +33,10 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/topusers"
-        android:name="com.example.thereafter.fragments.HomeItem"
+        android:name="com.example.thereafter.items.HomeItem"
         android:layout_width="170dp"
         android:layout_height="250dp"
-        android:layout_marginBottom="52dp"
+        android:layout_margin="10dp"
         android:background="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,9 +45,10 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/sermons"
-        android:name="com.example.thereafter.fragments.HomeItem"
+        android:name="com.example.thereafter.items.HomeItem"
         android:layout_width="170dp"
         android:layout_height="250dp"
+        android:layout_margin="10dp"
         android:background="#FFF"
         app:layout_constraintBottom_toTopOf="@+id/activities"
         app:layout_constraintEnd_toStartOf="@+id/posts"
@@ -57,9 +58,10 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/posts"
-        android:name="com.example.thereafter.fragments.HomeItem"
+        android:name="com.example.thereafter.items.HomeItem"
         android:layout_width="170dp"
         android:layout_height="250dp"
+        android:layout_margin="10dp"
         android:background="#FFF"
         app:layout_constraintBottom_toTopOf="@+id/topusers"
         app:layout_constraintEnd_toEndOf="parent"

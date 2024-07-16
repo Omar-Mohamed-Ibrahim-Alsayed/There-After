@@ -1,4 +1,4 @@
-package com.example.thereafter.fragments;
+package com.example.thereafter.items;
 
 import android.os.Bundle;
 
