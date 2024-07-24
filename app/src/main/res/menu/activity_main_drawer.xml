@@ -1,17 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_profile"
-        android:title="Profile"/>
+        android:title="@string/profileMenu"/>
     <item
         android:id="@+id/nav_home"
-        android:title="Home"/>
+        android:title="@string/homeMenu"/>
     <item
         android:id="@+id/nav_sermons"
-        android:title="Sermons"/>
+        android:title="@string/sermonsMenu"/>
     <item
         android:id="@+id/nav_posts"
-        android:title="Posts"/>
+        android:title="@string/postsMenu"/>
     <item
         android:id="@+id/nav_settings"
-        android:title="Settings"/>
+        android:title="@string/settingsMenu"/>
 </menu>

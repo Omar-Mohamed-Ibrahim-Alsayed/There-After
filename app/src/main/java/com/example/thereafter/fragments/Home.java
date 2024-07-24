@@ -47,10 +47,10 @@ public class Home extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        replaceFragment(R.id.activities, HomeItem.newInstance("Activities"));
-        replaceFragment(R.id.sermons, HomeItem.newInstance("Sermons"));
-        replaceFragment(R.id.posts, HomeItem.newInstance("Posts"));
-        replaceFragment(R.id.topusers, HomeItem.newInstance("Top Users"));
+        replaceFragment(R.id.activities, HomeItem.newInstance(getResources().getString(R.string.activities)));
+        replaceFragment(R.id.sermons, HomeItem.newInstance(getResources().getString(R.string.sermons)));
+        replaceFragment(R.id.posts, HomeItem.newInstance(getResources().getString(R.string.posts)));
+        replaceFragment(R.id.topusers, HomeItem.newInstance(getResources().getString(R.string.topusers)));
     }
 
     private void replaceFragment(int containerViewId, Fragment fragment) {

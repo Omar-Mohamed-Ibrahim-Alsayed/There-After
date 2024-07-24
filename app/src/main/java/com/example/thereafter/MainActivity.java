@@ -1,40 +1,43 @@
 package com.example.thereafter;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.os.Bundle;
-
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.navigation.NavigationView;
 import com.example.thereafter.fragments.Home;
 import com.example.thereafter.fragments.Posts;
 import com.example.thereafter.fragments.Profile;
 import com.example.thereafter.fragments.Sermons;
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
-
-//class MainActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//
-//        supportFragmentManager.beginTransaction().apply {
-//            replace(R.id.flFragment, Splash())
-//            commit()
-//        }
-//    }
-//}
+import com.example.thereafter.fragments.Settings;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawer;
-    private ActionBarDrawerToggle toggle;
+    private static final String PREFERENCES_FILE = "com.example.thereafter.preferences";
+    private static final String LANGUAGE_KEY = "language";
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Load language settings
+        SharedPreferences preferences = getSharedPreferences(PREFERENCES_FILE, 0);
+        String language = preferences.getString(LANGUAGE_KEY, Locale.getDefault().getLanguage());
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.setLocale(locale);
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+
+        // Set content view after updating configuration
         setContentView(R.layout.activity_main);
 
         drawer = findViewById(R.id.drawer_layout);
@@ -43,44 +46,40 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         // Handle navigation item clicks
         navigationView.setNavigationItemSelectedListener(item -> {
-            // Handle navigation item clicks here.
-            // You can replace fragments based on the selected item.
             switch (item.getItemId()) {
                 case R.id.nav_home:
-                    // Replace fragment with HomeFragment
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.flFragment, new Home())
                             .commit();
                     break;
                 case R.id.nav_sermons:
-                    // Replace fragment with GalleryFragment
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.flFragment, new Sermons())
                             .commit();
                     break;
                 case R.id.nav_posts:
-                    // Replace fragment with SlideshowFragment
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.flFragment, new Posts())
                             .commit();
                     break;
                 case R.id.nav_profile:
-                    // Replace fragment with SlideshowFragment
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.flFragment, new Profile())
                             .commit();
                     break;
-
+                case R.id.nav_settings:
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.flFragment, new Settings())
+                            .commit();
+                    break;
             }
-
-            // Close the drawer after selecting an item
             drawer.closeDrawer(GravityCompat.START);
             return true;
         });
@@ -94,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Ensure the ActionBarDrawerToggle handles the back button press correctly
     @Override
     public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -104,5 +102,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
-

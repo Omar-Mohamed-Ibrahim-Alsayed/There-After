@@ -14,9 +14,9 @@
         android:text="@string/activitiesTitle"
         android:textColor="@color/black"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/sermons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.fragment.app.FragmentContainerView

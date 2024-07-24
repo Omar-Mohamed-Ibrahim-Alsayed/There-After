@@ -20,4 +20,9 @@
     <string name="briefDescription">Brief Description</string>
     <string name="followIcon">Follow Icon</string>
     <string name="appBar">App bar</string>
+    <string name="profileMenu">Profile</string>
+    <string name="homeMenu">Home</string>
+    <string name="sermonsMenu">Sermons</string>
+    <string name="postsMenu">Posts</string>
+    <string name="settingsMenu">Settings</string>
 </resources>

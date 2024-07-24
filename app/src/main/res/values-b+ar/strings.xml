@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">اما بعد</string>
+    <string name="hello_blank_fragment">صفحة فارغة</string>
+    <string name="activitiesTitle">الأنشطة</string>
+    <string name="homeItemName">اسم_القسم</string>
+    <string name="homeItemImage">صورة العنصر الرئيسي</string>
+    <string name="sermonItemTitle">العنوان</string>
+    <string name="activities">الأنشطة</string>
+    <string name="sermons">الخطب</string>
+    <string name="topusers">أفضل المستخدمين</string>
+    <string name="posts">المنشورات</string>
+    <string name="sermonItemCategory">(الفئة)</string>
+    <string name="sermonItemContent">احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.</string>
+    <string name="sermonItemName">الاسم</string>
+    <string name="sermonItemBadge">الشارة</string>
+    <string name="icon">الأيقونة</string>
+    <string name="profilePicDescription">صورة الملف الشخصي</string>
+    <string name="likeIcon">أيقونة الإعجاب</string>
+    <string name="commentIcon">أيقونة التعليق</string>
+    <string name="shareIcon">أيقونة المشاركة</string>
+    <string name="likeText">إعجاب</string>
+    <string name="commentText">تعليق</string>
+    <string name="shareText">مشاركة</string>
+    <string name="activityPicture">صورة النشاط</string>
+    <string name="briefDescription">وصف مختصر</string>
+    <string name="followIcon">أيقونة المتابعة</string>
+    <string name="appBar">شريط التطبيق</string>
+    <string name="navigation_drawer_open">فتح القائمة</string>
+    <string name="navigation_drawer_close">غلق القائمة</string>
+    <string name="changeLanguage">تغيير اللغة</string>
+    <string name="profileMenu">الحساب</string>
+    <string name="homeMenu">الرئيسية</string>
+    <string name="sermonsMenu">الخطب</string>
+    <string name="postsMenu">المنشورات</string>
+    <string name="settingsMenu">الاعدادات</string>
+</resources>

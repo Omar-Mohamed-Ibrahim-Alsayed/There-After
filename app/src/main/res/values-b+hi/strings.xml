@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ThereAfter</string>
+    <string name="hello_blank_fragment">नमस्ते खाली फ़्रैगमेंट</string>
+    <string name="activitiesTitle">गतिविधियाँ</string>
+    <string name="homeItemName">कैट_नाम</string>
+    <string name="homeItemImage">होम आइटम छवि</string>
+    <string name="sermonItemTitle">शीर्षक</string>
+    <string name="sermonItemCategory">(श्रेणी)</string>
+    <string name="sermonItemContent">एक दूसरे का सम्मान करना एक सामंजस्यपूर्ण और उत्पादक समाज को बढ़ावा देने के लिए महत्वपूर्ण है। इसमें हमारे बीच मत, विश्वास, या सांस्कृतिक पृष्ठभूमि में भिन्नताओं और समानताओं को मान्यता देना और उनकी सराहना करना शामिल है।</string>
+    <string name="sermonItemName">नाम</string>
+    <string name="sermonItemBadge">बिज</string>
+    <string name="icon">आइकन</string>
+    <string name="profilePicDescription">प्रोफाइल चित्र</string>
+    <string name="likeIcon">लाइक आइकन</string>
+    <string name="commentIcon">कमेंट आइकन</string>
+    <string name="shareIcon">शेयर आइकन</string>
+    <string name="likeText">लाइक</string>
+    <string name="commentText">कमेंट</string>
+    <string name="shareText">शेयर</string>
+    <string name="activityPicture">गतिविधि चित्र</string>
+    <string name="briefDescription">संक्षिप्त विवरण</string>
+    <string name="followIcon">फॉलो आइकन</string>
+    <string name="appBar">एप बार</string>
+    <string name="navigation_drawer_open">नेविगेशन ड्रावर खोला गया</string>
+    <string name="navigation_drawer_close">नेविगेशन ड्रावर बंद</string>
+    <string name="changeLanguage">भाषा बदलें</string>
+    <string name="activities">गतिविधियाँ</string>
+    <string name="sermons">प्रवचन</string>
+    <string name="topusers">शीर्ष उपयोगकर्ता</string>
+    <string name="posts">पोस्ट</string>
+    <string name="profileMenu">प्रोफाइल</string>
+    <string name="homeMenu">होम</string>
+    <string name="sermonsMenu">प्रवचन</string>
+    <string name="postsMenu">पोस्ट्स</string>
+    <string name="settingsMenu">सेटिंग्स</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Español</item>
+        <item>اردو (پاکستان)</item>
+        <item>हिन्दी (भारत)</item>
+    </string-array>
+
+    <string-array name="language_codes">
+        <item>en</item>
+        <item>es</item>
+        <item>ur</item>
+        <item>hi</item>
+    </string-array>
+</resources>

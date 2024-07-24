@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">ThereAfter</string>
+    <string name="hello_blank_fragment">Hola fragmento vacío</string>
+    <string name="activitiesTitle">Actividades</string>
+    <string name="homeItemName">Nombre_Cat</string>
+    <string name="homeItemImage">Imagen del ítem de inicio</string>
+    <string name="sermonItemTitle">Título</string>
+    <string name="sermonItemCategory">(Categoría)</string>
+    <string name="sermonItemContent">Respetarse mutuamente es fundamental para fomentar una sociedad armoniosa y productiva. Implica reconocer y valorar las diferencias y similitudes que compartimos, ya sea en opiniones, creencias o antecedentes culturales.</string>
+    <string name="sermonItemName">Nombre</string>
+    <string name="sermonItemBadge">Insignia</string>
+    <string name="icon">Ícono</string>
+    <string name="profilePicDescription">Foto de perfil</string>
+    <string name="likeIcon">Ícono de me gusta</string>
+    <string name="commentIcon">Ícono de comentario</string>
+    <string name="shareIcon">Ícono de compartir</string>
+    <string name="likeText">Me gusta</string>
+    <string name="commentText">Comentario</string>
+    <string name="shareText">Compartir</string>
+    <string name="activityPicture">Imagen de actividad</string>
+    <string name="briefDescription">Descripción breve</string>
+    <string name="followIcon">Ícono de seguir</string>
+    <string name="appBar">Barra de aplicaciones</string>
+    <string name="navigation_drawer_open">Menú de navegación abierto</string>
+    <string name="navigation_drawer_close">Menú de navegación cerrado</string>
+    <string name="changeLanguage">Cambiar idioma</string>
+    <string name="activities">Actividades</string>
+    <string name="sermons">Sermones</string>
+    <string name="topusers">Usuarios principales</string>
+    <string name="posts">Publicaciones</string>
+    <string name="profileMenu">Perfil</string>
+    <string name="homeMenu">Inicio</string>
+    <string name="sermonsMenu">Sermones</string>
+    <string name="postsMenu">Publicaciones</string>
+    <string name="settingsMenu">Configuración</string>
+    <string-array name="languages">
+        <item>English</item>
+        <item>Español</item>
+        <item>Urdu (Pakistán)</item>
+        <item>Hindi (India)</item>
+    </string-array>
+
+    <string-array name="language_codes">
+        <item>en</item>
+        <item>es</item>
+        <item>ur</item>
+        <item>hi</item>
+    </string-array>
+</resources>

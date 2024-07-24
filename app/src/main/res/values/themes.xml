@@ -13,5 +13,8 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item> <!-- For light status bar icons -->
 
         <!-- Customize your theme here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:layoutDirection">locale</item>
     </style>
 </resources>
