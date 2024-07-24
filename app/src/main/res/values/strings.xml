@@ -33,6 +33,7 @@
     <string name="sermonsMenu">Sermons</string>
     <string name="postsMenu">Posts</string>
     <string name="settingsMenu">Settings</string>
+    <string name="Rate">rate</string>
     <string-array name="languages">
         <item>English</item>
         <item>Spanish</item>

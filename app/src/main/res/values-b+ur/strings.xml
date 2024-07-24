@@ -46,4 +46,5 @@
         <item>ur</item>
         <item>hi</item>
     </string-array>
+    <string name="Rate">rate</string>
 </resources>
