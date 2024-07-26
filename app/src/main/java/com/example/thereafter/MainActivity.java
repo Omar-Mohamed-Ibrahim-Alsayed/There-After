@@ -4,38 +4,50 @@ import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.Toolbar;
+
 import com.google.android.material.navigation.NavigationView;
 import com.example.thereafter.fragments.Home;
 import com.example.thereafter.fragments.Posts;
 import com.example.thereafter.fragments.Profile;
 import com.example.thereafter.fragments.Sermons;
 import com.example.thereafter.fragments.Settings;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private DrawerLayout drawer;
     private static final String PREFERENCES_FILE = "com.example.thereafter.preferences";
     private static final String LANGUAGE_KEY = "language";
+    private static final String DARK_MODE_KEY = "dark_mode";
+    private DrawerLayout drawer;
 
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load language settings
+        // Load preferences
         SharedPreferences preferences = getSharedPreferences(PREFERENCES_FILE, 0);
         String language = preferences.getString(LANGUAGE_KEY, Locale.getDefault().getLanguage());
+        boolean darkMode = preferences.getBoolean(DARK_MODE_KEY, false);
+
+        // Apply language settings
         Locale locale = new Locale(language);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
         config.setLocale(locale);
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+
+        // Apply dark mode settings
+        applyDarkMode(darkMode);
 
         // Set content view after updating configuration
         setContentView(R.layout.activity_main);
@@ -99,6 +111,16 @@ public class MainActivity extends AppCompatActivity {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    private void applyDarkMode(boolean isDarkModeEnabled) {
+        if (isDarkModeEnabled) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            Log.d("MainActivity", "Dark mode applied");
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            Log.d("MainActivity", "Light mode applied");
         }
     }
 }

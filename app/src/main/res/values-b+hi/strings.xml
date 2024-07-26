@@ -47,4 +47,15 @@
         <item>hi</item>
     </string-array>
     <string name="Rate">rate</string>
+    <string name="language">Language</string>
+    <string name="darkMode">Dark Mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="accountSettings">Account Settings</string>
+    <string name="helpAndSupport">Help and Support</string>
+    <string name="getHelpAndSupport">Get help and support</string>
+    <string name="feedback">Provide feedback or report bugs</string>
+    <string name="legal">Legal</string>
+    <string name="TAS">View the app\'s terms of service</string>
+    <string name="PAP">View the app\'s privacy policy</string>
+    <string name="EditAccSett">Manage your account details</string>
 </resources>

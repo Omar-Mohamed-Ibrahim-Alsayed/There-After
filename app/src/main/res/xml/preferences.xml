@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="General">
+        <ListPreference
+            android:key="language"
+            android:title="Language"
+            android:summary="Select your preferred language"
+            android:entries="@array/languages"
+            android:entryValues="@array/language_codes" />
+
+        <SwitchPreferenceCompat
+            android:key="dark_mode"
+            android:title="Dark Mode"
+            android:summary="Enable or disable dark mode" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Notifications">
+        <SwitchPreferenceCompat
+            android:key="notifications"
+            android:title="Enable Notifications"
+            android:summary="Toggle notifications on or off" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Account">
+        <Preference
+            android:key="account_settings"
+            android:title="Account Settings"
+            android:summary="Manage your account details" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Privacy and Security">
+        <SwitchPreferenceCompat
+            android:key="biometric_auth"
+            android:title="Biometric Authentication"
+            android:summary="Use fingerprint or face recognition to secure the app" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Support">
+        <Preference
+            android:key="help_support"
+            android:title="Help and Support"
+            android:summary="Get help and support" />
+
+        <Preference
+            android:key="feedback"
+            android:title="Feedback"
+            android:summary="Provide feedback or report bugs" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Legal">
+        <Preference
+            android:key="terms_of_service"
+            android:title="Terms of Service"
+            android:summary="View the app's terms of service" />
+
+        <Preference
+            android:key="privacy_policy"
+            android:title="Privacy Policy"
+            android:summary="View the app's privacy policy" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

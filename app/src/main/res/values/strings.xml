@@ -34,8 +34,20 @@
     <string name="postsMenu">Posts</string>
     <string name="settingsMenu">Settings</string>
     <string name="Rate">rate</string>
+    <string name="language">Language</string>
+    <string name="darkMode">Dark Mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="accountSettings">Account Settings</string>
+    <string name="helpAndSupport">Help and Support</string>
+    <string name="getHelpAndSupport">Get help and support</string>
+    <string name="feedback">Provide feedback or report bugs</string>
+    <string name="legal">Legal</string>
+    <string name="TAS">View the app\'s terms of service</string>
+    <string name="PAP">View the app\'s privacy policy</string>
+    <string name="EditAccSett">Manage your account details</string>
     <string-array name="languages">
         <item>English</item>
+        <item>Arabic</item>
         <item>Spanish</item>
         <item>Urdu (Pakistan)</item>
         <item>Hindi (India)</item>
@@ -43,6 +55,7 @@
 
     <string-array name="language_codes">
         <item>en</item>
+        <item>ar</item>
         <item>es</item>
         <item>ur</item>
         <item>hi</item>
