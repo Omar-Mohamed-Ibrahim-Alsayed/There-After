@@ -7,7 +7,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.thereafter.R;
+import com.example.thereafter.fragments.SermonDetails;
 import com.example.thereafter.utilities.Sermon;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -63,13 +65,13 @@ public class SermonsAdapter extends RecyclerView.Adapter<SermonsAdapter.SermonVi
             badges = itemView.findViewById(R.id.profilebadge);
             //image = itemView.findViewById(R.id.SermonLogo);
 
-//            itemView.setOnClickListener(v -> {
-//                Sermon current = sermons.get(getAdapterPosition());
-//                fragmentManager.beginTransaction()
-//                        .replace(R.id.flFragment, new DescriptionFragment(current))
-//                        .addToBackStack(null)
-//                        .commit();
-//            });
+            itemView.setOnClickListener(v -> {
+                Sermon current = sermons.get(getAdapterPosition());
+                fragmentManager.beginTransaction()
+                        .replace(R.id.flFragment, new SermonDetails())
+                        .addToBackStack(null)
+                        .commit();
+            });
         }
 
         public void bind(Sermon sermon) {

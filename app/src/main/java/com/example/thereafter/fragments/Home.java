@@ -46,9 +46,9 @@ public class Home extends Fragment {
 
         // Set click listeners
         posts.setOnClickListener(v -> replaceFragment(new Posts()));
-        toprusers.setOnClickListener(v -> replaceFragment(HomeItem.newInstance("Top Users")));
+        toprusers.setOnClickListener(v -> replaceFragment(new TopUsers()));
         sermons.setOnClickListener(v -> replaceFragment(new Sermons()));
-        activities.setOnClickListener(v -> replaceFragment(HomeItem.newInstance("Activities")));
+        activities.setOnClickListener(v -> replaceFragment(new Activities()));
 
     }
 

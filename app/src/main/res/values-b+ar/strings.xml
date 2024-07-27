@@ -60,4 +60,5 @@
         <item>ur</item>
         <item>hi</item>
     </string-array>
+    <string name="owners_name">اسم المالك</string>
 </resources>

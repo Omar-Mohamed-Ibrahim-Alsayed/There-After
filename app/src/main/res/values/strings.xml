@@ -6,7 +6,7 @@
     <string name="homeItemImage">Home Item Image</string>
     <string name="sermonItemTitle">Title</string>
     <string name="sermonItemCategory">(Category)</string>
-    <string name="sermonItemContent">Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.</string>
+    <string name="sermonItemContent">Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.Respecting each other is fundamental to fostering a harmonious and productive society. It involves acknowledging and valuing the differences and similarities we share, whether in opinions, beliefs, or cultural backgrounds.</string>
     <string name="sermonItemName">Name</string>
     <string name="sermonItemBadge">Badge</string>
     <string name="icon">Icon</string>
@@ -45,6 +45,11 @@
     <string name="TAS">View the app\'s terms of service</string>
     <string name="PAP">View the app\'s privacy policy</string>
     <string name="EditAccSett">Manage your account details</string>
+    <string name="owners_name">Owners Name</string>
+    <string name="sermon_description" translatable="false">Sermon Description</string>
+    <string name="show_more" translatable="false">Show More</string>
+    <string name="show_less" translatable="false">Show Less</string>
+
     <string-array name="languages">
         <item>English</item>
         <item>Arabic</item>

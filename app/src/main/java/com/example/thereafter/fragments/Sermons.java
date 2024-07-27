@@ -1,4 +1,3 @@
-
 package com.example.thereafter.fragments;
 
 import android.os.Bundle;
@@ -28,14 +27,10 @@ public class Sermons extends Fragment {
         return new Sermons();
     }
 
-    public void setCategory(String cat) {
-        this.cat = cat;
-    }
-
     public static List<Sermon> getSampleSermons() {
         List<Sermon> sermons = new ArrayList<>();
 
-        sermons.add(new Sermon("خطبة 1", 1, "صورة1.jpg", "فئة أ", "محتوى الخطبة 1", 4.5, "مالك 1", "شارة 1"));
+        sermons.add(new Sermon("خطبة 1", 1, "صورة1.jpg", "فئة أ", "احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.احترام بعضنا البعض هو أساس تعزيز مجتمع متناغم ومنتج. يتضمن الاعتراف بقيمة الاختلافات والتشابهات التي نشاركها، سواء في الآراء أو المعتقدات أو الخلفيات الثقافية.", 4.5, "مالك 1", "شارة 1"));
         sermons.add(new Sermon("خطبة 2", 2, "صورة2.jpg", "فئة ب", "محتوى الخطبة 2", 4.0, "مالك 2", "شارة 2"));
         sermons.add(new Sermon("خطبة 3", 3, "صورة3.jpg", "فئة ج", "محتوى الخطبة 3", 3.5, "مالك 3", "شارة 3"));
         sermons.add(new Sermon("خطبة 4", 4, "صورة4.jpg", "فئة أ", "محتوى الخطبة 4", 4.7, "مالك 4", "شارة 4"));
@@ -59,9 +54,14 @@ public class Sermons extends Fragment {
         return sermons;
     }
 
+    public void setCategory(String cat) {
+        this.cat = cat;
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sermons, container, false);
 

@@ -10,27 +10,26 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/profilepic"
+        android:id="@+id/activitypic"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/activityPicture"
         android:src="@drawable/baseline_photo_size_select_actual_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
 
-        android:gravity="center"
         android:background="@drawable/gd_activity"
-        app:layout_constraintBottom_toBottomOf="@+id/profilepic"
-        app:layout_constraintStart_toStartOf="@+id/profilepic"
-        app:layout_constraintEnd_toEndOf="@+id/profilepic"
+        android:gravity="center"
         android:orientation="vertical"
-        >
+        app:layout_constraintBottom_toBottomOf="@+id/activitypic"
+        app:layout_constraintEnd_toEndOf="@+id/activitypic"
+        app:layout_constraintStart_toStartOf="@+id/activitypic">
 
         <TextView
             android:id="@+id/activity_name"
@@ -40,7 +39,8 @@
             android:text="Activity Name"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="35sp"/>
+            android:textSize="35sp" />
+
         <TextView
             android:id="@+id/activity_info"
             android:layout_width="wrap_content"
@@ -49,7 +49,8 @@
             android:text="Date XX/XX/XXXX"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
+
         <TextView
             android:id="@+id/activity_description"
             android:layout_width="wrap_content"
@@ -58,7 +59,7 @@
             android:text="Activity Description"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
     </LinearLayout>
 

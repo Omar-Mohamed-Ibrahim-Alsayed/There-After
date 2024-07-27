@@ -58,4 +58,5 @@
     <string name="TAS">View the app\'s terms of service</string>
     <string name="PAP">View the app\'s privacy policy</string>
     <string name="EditAccSett">Manage your account details</string>
+    <string name="owners_name">Owners Name</string>
 </resources>

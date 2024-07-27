@@ -1,66 +1,59 @@
 package com.example.thereafter.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.thereafter.R;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TopUsers#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.example.thereafter.R;
+import com.example.thereafter.utilities.TopUsersAdapter;
+import com.example.thereafter.utilities.UserItem;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class TopUsers extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private RecyclerView recyclerView;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public TopUsers() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TopUsers.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static TopUsers newInstance(String param1, String param2) {
-        TopUsers fragment = new TopUsers();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static List<UserItem> getSampleUsers() {
+        List<UserItem> users = new ArrayList<>();
+        users.add(new UserItem("User 1", 1, "Badge1", "Image1.jpg", 5, 10, 15));
+        users.add(new UserItem("User 2", 2, "Badge2", "Image2.jpg", 4.5, 8, 12));
+        users.add(new UserItem("User 3", 3, "Badge3", "Image3.jpg", 4, 15, 20));
+        // Add more sample users as needed
+        return users;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_top_users, container, false);
+        View view = inflater.inflate(R.layout.fragment_top_users, container, false);
+
+        recyclerView = view.findViewById(R.id.rview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        List<UserItem> topUsers = getSampleUsers();
+        TopUsersAdapter adapter = new TopUsersAdapter(topUsers, getParentFragmentManager());
+        recyclerView.setAdapter(adapter);
+
+        return view;
     }
 }
