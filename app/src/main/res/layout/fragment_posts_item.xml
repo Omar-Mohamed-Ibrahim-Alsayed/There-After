@@ -71,10 +71,10 @@
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/sercontent"
-        app:layout_constraintEnd_toEndOf="@+id/sercontent"
-        app:layout_constraintStart_toStartOf="@+id/sercontent"
-        app:layout_constraintTop_toTopOf="@+id/sercontent" />
+        app:layout_constraintBottom_toBottomOf="@id/postcontent"
+        app:layout_constraintEnd_toEndOf="@id/postcontent"
+        app:layout_constraintStart_toStartOf="@id/postcontent"
+        app:layout_constraintTop_toTopOf="@id/postcontent" />
 
     <LinearLayout
         android:id="@+id/action_bar"
@@ -86,7 +86,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sercontent">
+        app:layout_constraintTop_toBottomOf="@id/postcontent">
 
         <ImageView
             android:id="@+id/reaction_icon"

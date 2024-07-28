@@ -49,6 +49,11 @@
     <string name="sermon_description" translatable="false">Sermon Description</string>
     <string name="show_more" translatable="false">Show More</string>
     <string name="show_less" translatable="false">Show Less</string>
+    <string name="submit_sermon">Submit Sermon</string>
+    <string name="type_here">Type Here...</string>
+    <string name="media">Media</string>
+    <string name="file">File</string>
+    <string name="audio">Audio</string>
 
     <string-array name="languages">
         <item>English</item>

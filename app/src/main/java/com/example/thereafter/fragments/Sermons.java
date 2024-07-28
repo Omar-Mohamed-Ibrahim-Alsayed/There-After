@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -22,6 +24,8 @@ public class Sermons extends Fragment {
 
     private RecyclerView recyclerView;
     private String cat;
+    private FragmentManager fragmentManager;
+    private ImageButton addPost;
 
     public static Sermons newInstance() {
         return new Sermons();
@@ -54,9 +58,6 @@ public class Sermons extends Fragment {
         return sermons;
     }
 
-    public void setCategory(String cat) {
-        this.cat = cat;
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -64,6 +65,15 @@ public class Sermons extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sermons, container, false);
+        fragmentManager = getParentFragmentManager();
+
+        addPost = view.findViewById(R.id.add_sermon);
+        addPost.setOnClickListener(v -> {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.flFragment, new AddSermon())
+                    .addToBackStack(null)
+                    .commit();
+        });
 
         recyclerView = view.findViewById(R.id.rview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

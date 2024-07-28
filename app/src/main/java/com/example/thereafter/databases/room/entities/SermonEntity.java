@@ -1,8 +1,8 @@
 package com.example.thereafter.databases.room.entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.ColumnInfo;
 
 @Entity(tableName = "sermons")
 public class SermonEntity {
@@ -29,11 +29,11 @@ public class SermonEntity {
     private String image;
 
     @ColumnInfo(name = "rate")
-    private Number rate;
+    private Double rate;
 
     // Constructors, getters, and setters
 
-    public SermonEntity(String name, String category, String content, String owner, String badges, String image, Number rate) {
+    public SermonEntity(String name, String category, String content, String owner, String badges, String image, Double rate) {
         this.name = name;
         this.category = category;
         this.content = content;
@@ -99,11 +99,11 @@ public class SermonEntity {
         this.image = image;
     }
 
-    public Number getRate() {
+    public Double getRate() {
         return rate;
     }
 
-    public void setRate(Number rate) {
+    public void setRate(Double rate) {
         this.rate = rate;
     }
 }

@@ -1,8 +1,8 @@
 package com.example.thereafter.databases.room.entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.ColumnInfo;
 
 @Entity(tableName = "activities")
 public class ActivityItemEntity {
@@ -26,7 +26,7 @@ public class ActivityItemEntity {
     private String image;
 
     @ColumnInfo(name = "followers")
-    private Number followers;
+    private Integer followers;
 
     @ColumnInfo(name = "date")
     private String date;
@@ -36,7 +36,7 @@ public class ActivityItemEntity {
 
     // Constructors, getters, and setters
 
-    public ActivityItemEntity(String name, String tags, String description, String owner, String image, Number followers, String date, String certification) {
+    public ActivityItemEntity(String name, String tags, String description, String owner, String image, Integer followers, String date, String certification) {
         this.name = name;
         this.tags = tags;
         this.description = description;
@@ -95,11 +95,11 @@ public class ActivityItemEntity {
         this.image = image;
     }
 
-    public Number getFollowers() {
+    public Integer getFollowers() {
         return followers;
     }
 
-    public void setFollowers(Number followers) {
+    public void setFollowers(Integer followers) {
         this.followers = followers;
     }
 

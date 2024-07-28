@@ -1,8 +1,8 @@
 package com.example.thereafter.databases.room.entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.ColumnInfo;
 
 @Entity(tableName = "posts")
 public class PostItemEntity {
@@ -26,14 +26,14 @@ public class PostItemEntity {
     private String image;
 
     @ColumnInfo(name = "likes")
-    private Number likes;
+    private Integer likes;
 
     @ColumnInfo(name = "comments")
-    private Number comments;
+    private Integer comments;
 
     // Constructors, getters, and setters
 
-    public PostItemEntity(String tags, String content, String owner, String badges, String image, Number likes, Number comments) {
+    public PostItemEntity(String tags, String content, String owner, String badges, String image, Integer likes, Integer comments) {
         this.tags = tags;
         this.content = content;
         this.owner = owner;
@@ -91,19 +91,19 @@ public class PostItemEntity {
         this.image = image;
     }
 
-    public Number getLikes() {
+    public Integer getLikes() {
         return likes;
     }
 
-    public void setLikes(Number likes) {
+    public void setLikes(Integer likes) {
         this.likes = likes;
     }
 
-    public Number getComments() {
+    public Integer getComments() {
         return comments;
     }
 
-    public void setComments(Number comments) {
+    public void setComments(Integer comments) {
         this.comments = comments;
     }
 }

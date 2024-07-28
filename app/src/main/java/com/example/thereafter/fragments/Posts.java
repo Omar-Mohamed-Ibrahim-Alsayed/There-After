@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,7 +22,9 @@ import java.util.List;
 
 public class Posts extends Fragment {
 
+    private FragmentManager fragmentManager;
     private RecyclerView recyclerView;
+    private ImageButton addPost;
 
 
     public Posts() {
@@ -47,6 +51,16 @@ public class Posts extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_posts, container, false);
+
+        fragmentManager = getParentFragmentManager();
+
+        addPost = view.findViewById(R.id.add_post);
+        addPost.setOnClickListener(v -> {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.flFragment, new AddPost())
+                    .addToBackStack(null)
+                    .commit();
+        });
 
         recyclerView = view.findViewById(R.id.rview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
